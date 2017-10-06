@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="C3h-z5-24n">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Ramen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S6X-yu-Vze">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="uqy-iE-sx7">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uqy-iE-sx7" id="2oO-5h-meg">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="YPT-mh-ylk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="FFn-ar-V8B"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S6X-yu-Vze" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1C7-oz-IjM"/>
+                            <constraint firstItem="S6X-yu-Vze" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="5aT-GX-rMN"/>
+                            <constraint firstItem="S6X-yu-Vze" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dLX-rF-AJQ"/>
+                            <constraint firstItem="S6X-yu-Vze" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tXA-AY-vcq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9JH-yh-BrS"/>
+                    <connections>
+                        <segue destination="q8j-aj-KfO" kind="show" identifier="showDetail" id="8ik-TU-BPr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1014" y="133"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ocv-LU-Why">
+            <objects>
+                <viewController id="q8j-aj-KfO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fgc-pM-2ru">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tonkotsu" translatesAutoresizingMaskIntoConstraints="NO" id="Hip-LM-9en">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="A6r-Lx-JV4"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZJi-vf-Joo">
+                                <rect key="frame" x="0.0" y="136" width="320" height="432"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">豚骨（とんこつ）とは、豚の骨の事であり、主にスープにするための食材である。
+骨の部位によって、「豚丸骨（げんこつ）」（脛骨や大腿骨）、「頭骨」、「背骨・ロース骨」、「ネック骨」などと呼び分ける場合がある。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hip-LM-9en" firstAttribute="top" secondItem="Fgc-pM-2ru" secondAttribute="top" id="XCj-b7-Hng"/>
+                            <constraint firstItem="Hip-LM-9en" firstAttribute="trailing" secondItem="2iy-Lq-gi8" secondAttribute="trailing" id="aGE-F4-Eud"/>
+                            <constraint firstItem="Hip-LM-9en" firstAttribute="leading" secondItem="2iy-Lq-gi8" secondAttribute="leading" id="avr-0S-tac"/>
+                            <constraint firstItem="ZJi-vf-Joo" firstAttribute="trailing" secondItem="2iy-Lq-gi8" secondAttribute="trailing" id="eNR-Iw-dLG"/>
+                            <constraint firstItem="ZJi-vf-Joo" firstAttribute="top" secondItem="Hip-LM-9en" secondAttribute="bottom" constant="8" id="hYg-6I-ylY"/>
+                            <constraint firstItem="ZJi-vf-Joo" firstAttribute="leading" secondItem="2iy-Lq-gi8" secondAttribute="leading" id="xgJ-CE-fl7"/>
+                            <constraint firstItem="ZJi-vf-Joo" firstAttribute="bottom" secondItem="2iy-Lq-gi8" secondAttribute="bottom" id="yaM-Fq-pRy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2iy-Lq-gi8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lOn-EW-6Ql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1847" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cPa-Wm-FlY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C3h-z5-24n" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gh9-SJ-pI4">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="S3d-8m-koB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9vH-Ub-ONj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="133.09859154929578"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tonkotsu" width="320" height="325"/>
+    </resources>
+</document>
